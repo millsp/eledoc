@@ -1,0 +1,12 @@
+{{#with comment}}
+    {{#if hasVisibleComponent}}
+        <div class="tsd-comment">
+            {{#if tags}}
+                {{#each tags}}
+                    <h4>{{tagName}}</h4>
+                    <p>{{#markdown}}{{{text}}}{{/markdown}}</p>
+                {{/each}}
+            {{/if}}
+        </div>
+    {{/if}}
+{{/with}}

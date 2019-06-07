@@ -1,0 +1,28 @@
+<section class="tsd-panel tsd-member {{cssClasses}} tsd-descriptions">
+    <a name="{{anchor}}" class="tsd-anchor"></a>
+    {{#if name}}
+        <h3>{{#each flags}}<span class="tsd-flag ts-flag{{this}}">{{this}}</span> {{/each}}{{{wbr name}}}</h3>
+    {{/if}}
+    {{!-- // todo see why comment does not display --}}
+
+    {{#if signatures}}
+        {{> member.signatures}}
+    {{else}}{{#if hasGetterOrSetter}}
+        {{> member.getterSetter}}
+    {{else}}
+        {{> member.declaration}}
+    {{/if}}{{/if}}
+
+    {{#each groups}}
+        {{#each children}}
+            {{#unless hasOwnDocument}}
+                {{> member}}
+            {{/unless}}
+        {{/each}}
+    {{/each}}
+
+    {{> comment-tags}}
+
+    {{> member.sources}}
+
+</section>

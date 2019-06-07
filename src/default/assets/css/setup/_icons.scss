@@ -1,0 +1,144 @@
+// This is extremely piggy but will do till next version
+// Rebuilt with React
+
+.tsd-is-protected {
+    > .tsd-kind-icon::before {
+        content: '🛡️'
+    }
+}
+
+.tsd-is-private {
+    > .tsd-kind-icon::before {
+        content: '🔒'
+    }
+}
+
+.tsd-is-static {
+    > .tsd-kind-icon::before {
+        content: '💠'
+    }
+}
+
+.tsd-is-inherited {
+    > .tsd-kind-icon::before {
+        content: '📩'
+    }
+}
+
+@mixin icon($icon, $kind) {
+    .tsd-kind-#{$kind} {
+        > .tsd-kind-icon::before {
+            content: '#{$icon}'
+        }
+    }
+
+    // Protected combs
+    .tsd-kind-#{$kind}.tsd-is-protected {
+        > .tsd-kind-icon::after {
+            content: '🛡️'
+        }
+    }
+
+    .tsd-kind-#{$kind}.tsd-is-protected.tsd-is-static {
+        > .tsd-kind-icon::after {
+            content: '🛡️💠'
+        }
+    }
+
+    .tsd-kind-#{$kind}.tsd-is-protected.tsd-is-static.tsd-is-inherited {
+        > .tsd-kind-icon::after {
+            content: '📩🛡️💠'
+        }
+    }
+
+    .tsd-kind-#{$kind}.tsd-is-protected.tsd-is-inherited {
+        > .tsd-kind-icon::after {
+            content: '📩🛡️'
+        }
+    }
+    
+    // Private combs
+    .tsd-kind-#{$kind}.tsd-is-private {
+        > .tsd-kind-icon::after {
+            content: '🔒'
+        }
+    }
+
+    .tsd-kind-#{$kind}.tsd-is-private.tsd-is-static {
+        > .tsd-kind-icon::after {
+            content: '🔒💠'
+        }
+    }
+
+    .tsd-kind-#{$kind}.tsd-is-private.tsd-is-static.tsd-is-inherited {
+        > .tsd-kind-icon::after {
+            content: '📩🔒💠'
+        }
+    }
+
+    .tsd-kind-#{$kind}.tsd-is-private.tsd-is-inherited {
+        > .tsd-kind-icon::after {
+            content: '📩🔒'
+        }
+    }
+
+    // Inherited combs
+    .tsd-kind-#{$kind}.tsd-is-inherited {
+        > .tsd-kind-icon::after {
+            content: '📩'
+        }
+    }
+
+    .tsd-kind-#{$kind}.tsd-is-static {
+        > .tsd-kind-icon::after {
+            content: '💠'
+        }
+    }
+
+    .tsd-kind-#{$kind}.tsd-is-inherited.tsd-is-static {
+        > .tsd-kind-icon::after {
+            content: '📩💠'
+        }
+    }
+}
+
+@include icon('📌', 'property');
+@include icon('📌', 'enum-member');
+@include icon('ℹ️', 'index-signature');
+@include icon('🖊', 'type-alias');
+@include icon('💱', 'variable');
+@include icon('🗃️', 'class');
+@include icon('🕹', 'method');
+@include icon('🕹', 'function');
+@include icon('🔨', 'constructor');
+@include icon('📜', 'enum');
+@include icon('📐', 'interface');
+@include icon('{..}', 'object-literal');
+@include icon('📦', 'module');
+@include icon('🗝', 'accessor');
+@include icon('🗝', 'set-signature');
+@include icon('🗝', 'get-signature');
+
+.tsd-kind-icon {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    text-indent: -20px;
+
+    &::before {
+        font-weight: bold;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 5px 10px 5px 10px;
+    }
+
+    &::after {
+        padding-left: 5px;
+        font-size: 0.7em;
+        vertical-align: middle;
+    }
+}
+
+.tsd-kind-icon::after:hover {
+    text-decoration: none !important;
+}

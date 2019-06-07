@@ -1,0 +1,145 @@
+// Wraps a function signature.
+// Changes its appearance when directly placed inside a `tsd-panel`.
+// Can be combined with class `tsd-kind-icon` to display an icon in front of the signature.
+//
+// <div class="tsd-kind-method">
+//   <div class="tsd-signature tsd-kind-icon">
+//     get<wbr>Child<wbr>ByName<span class="tsd-signature-symbol">(</span>
+//       name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>
+//     <span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span>
+//     <a href="# class="tsd-signature-type">DeclarationReflection</a>
+//   </div>
+// </div>
+//
+
+.tsd-signature
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    margin: 0 0 1em 0
+    padding: 10px
+    border: 1px solid $COLOR_PANEL_DIVIDER
+    font-family: $FONT_FAMILY_MONO
+    font-size: $FONT_SIZE_MONO
+
+    &.tsd-kind-icon
+        padding-left: 30px
+
+        &:before
+            top: 10px
+            left: 10px
+
+    .tsd-panel > &
+        margin-left: -20px
+        margin-right: -20px
+        border-width: 1px 0
+
+        &.tsd-kind-icon
+            padding-left: 40px
+
+            &:before
+                left: 20px
+
+.tsd-signature:hover
+    white-space: normal !important
+    text-overflow: ellipsis !important
+
+.tsd-signature-symbol
+    color: $COLOR_TEXT_ASIDE
+    font-weight: normal
+
+.tsd-signature-type
+    text-transform: none
+    font-weight: normal
+    color: $THEME_COLOR
+
+
+// Displays a list of signatures.
+// Changes its appearance when directly placed inside a `tsd-panel`.
+// Made interactive by JavaScript at `typedoc.Signature`.
+//
+// <ul class="tsd-signatures tsd-kind-method">
+//   <li class="tsd-signature tsd-kind-icon current">getChildByName(name: string): DeclarationReflection</li>
+//   <li class="tsd-signature tsd-kind-icon">getChildByName(names: Array&lt;string&gt;): DeclarationReflection</li>
+// </ul>
+//
+.tsd-signatures
+    padding: 0
+    margin: 0 0 1em 0
+    border: 1px solid $COLOR_PANEL_DIVIDER
+
+    .tsd-signature
+        margin: 0
+        border-width: 1px 0 0 0
+        transition: background-color 0.1s
+
+        &:first-child
+            border-top-width: 0
+
+        &.current
+            background-color: $COLOR_PANEL_DIVIDER
+
+    &.active > .tsd-signature
+        cursor: pointer
+
+    .tsd-panel > &
+        margin-left: -20px
+        margin-right: -20px
+        border-width: 1px 0
+
+        .tsd-signature.tsd-kind-icon
+            padding-left: 40px
+
+            &:before
+                left: 20px
+
+    .tsd-panel > a.anchor + &
+        border-top-width: 0
+        margin-top: -20px
+
+
+// Holds the descriptions related to a list of signatures.
+// Made interactive by JavaScript at `typedoc.Signature`.
+.tsd-descriptions
+    position: relative
+    overflow: hidden
+    transition: height 0.3s
+    list-style: initial
+
+    > li
+        @extend %prevent-children-margin
+
+    &.active > .tsd-description
+        display: none
+
+        &.current
+            display: block
+
+        &.fade-in
+            animation: fade-in-delayed 0.3s
+
+        &.fade-out
+            animation: fade-out-delayed 0.3s
+            position: absolute
+            display: block
+            top: 0
+            left: 0
+            right: 0
+            opacity: 0
+            visibility: hidden
+
+ul.tsd-parameters,
+ul.tsd-type-parameters
+    list-style: initial
+    margin: 0
+    padding-left: 20px
+
+    .name
+        @extend code
+
+    .tsd-comment
+        text-align: justify
+        margin-top: -0.5em
+    
+    li
+        margin-top: 10px
