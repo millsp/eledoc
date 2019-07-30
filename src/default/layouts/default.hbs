@@ -9,26 +9,51 @@
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{relativeURL "assets/css/main.css"}}">
+    <script>
+        var test = 0
+        function openNav(e) {
+            document.getElementById("global-nav").style.width   = "250px";
+            document.getElementById("global-nav").style.padding = "25px";
+            e.stopPropagation()
+        }
+
+        function closeNav(e) {
+            if (!document.getElementById("global-nav").contains(e.target)) {
+                document.getElementById("global-nav").style.width   = "0";
+                document.getElementById("global-nav").style.padding = "0";
+            }
+        }
+    </script>
 </head>
-<body>
+
+<body onclick="closeNav(event)">
 
 {{> header}}
 
-<div class="container container-main">
+<nav id="global-nav" class="tsd-navigation sidenav">
+    <ul>
+        {{#each navigation.children}}
+            {{> navglobals}}
+        {{/each}}
+    </ul>
+</nav>
+
+<div id="main" class="container container-main">
     <div class="row">
         <div class="col-8 col-content">
             {{{contents}}}
         </div>
         <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
-            <nav class="tsd-navigation primary">
-                <ul>
-                    {{#each navigation.children}}
-                        {{> navigation}}
-                    {{/each}}
-                </ul>
-            </nav>
-
             <nav class="tsd-navigation secondary menu-sticky">
+                <ul>
+                    <li>
+                        📑
+                        <span onclick="openNav(event)" style="cursor: pointer; padding-left: 10px">
+                            Documentation
+                        </span>
+                    </li>
+                </ul>
+                <br>
                 <ul class="before-current">
                     {{#each toc.children}}
                         {{> toc.root}}

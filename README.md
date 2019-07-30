@@ -1,155 +1,282 @@
 <p align="center">
-  <a href="https://opencollective.com/docz" target="_blank">
-    <img src="https://cdn-std.dprcdn.net/files/acc_649651/Q5nVhT" height="80" alt="Open Collective">
+  <a href="https://github.com/pirix-gh/ts-toolbelt">
+    <img alt="logo" title="ts-toolbelt" src="https://raw.githubusercontent.com/pirix-gh/ts-toolbelt/master/.github/logo.png" width="300">
   </a>
-  <a href="https://www.patreon.com/pedronauck" target="_blank">
-    <img src="https://cdn-std.dprcdn.net/files/acc_649651/plrSCT" height="80" alt="Patreon">
-  </a>
-</p>
 
-<p align="center" style="margin-bottom: -20px">
-  <img src="https://cdn-std.dprcdn.net/files/acc_649651/BSPk3z">
+  <h3 align="center">ts-toolbelt</h3>
+
+  <p align="center">
+    👷 Higher type safety for TypeScript
+    <br>
+    <a href="https://pirix-gh.github.io/ts-toolbelt/" target="_blank"><strong>Explore the docs »</strong></a>
+    <br>
+    <br>
+    <a href="#demo">🎮 View Demo</a>
+    ·
+    <a href="https://github.com/pirix-gh/ts-toolbelt/issues/new?template=---bug-report.md">🐞 Report Bug</a>
+    ·
+    <a href="https://github.com/pirix-gh/ts-toolbelt/issues/new?template=---feature-request.md">🍩 Request Feature</a>
+    ·
+    <a href="https://github.com/pirix-gh/ts-toolbelt/issues/new?template=---question.md">🤔  Ask Questions</a>
+  </p>
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/docz" target="_blank">
-    <img src="https://badgen.net/npm/v/docz" alt="">
-  </>
-  <a href="LICENSE.md" target="_blank">
-    <img src="https://badgen.net/badge/license/MIT/blue" alt="">
+  <a href="https://gitter.im/ts-toolbelt/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link" target="_blank">
+    <img src="https://img.shields.io/gitter/room/ts-toolbelt/community.svg">
   </a>
-  <a href="https://www.npmjs.com/package/docz" target="_blank">
-    <img src="https://badgen.net/npm/dt/docz" alt="">
+  <a href="https://www.npmjs.com/package/ts-toolbelt" target="_blank">
+    <img src="https://img.shields.io/npm/v/ts-toolbelt.svg">
   </a>
-  <a href="http://feedback.docz.site/roadmap" target="_blank">
-    <img src="https://img.shields.io/badge/check-our%20roadmap-5362F5.svg" alt="Chat">
+  <a href="https://travis-ci.org/pirix-gh/ts-toolbelt" target="_blank">
+    <img src="https://img.shields.io/travis/pirix-gh/ts-toolbelt.svg">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/npm/dm/ts-toolbelt.svg">
+  </a>
+  <a href="http://makeapullrequest.com" target="_blank">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/npm/l/ts-toolbelt.svg">
   </a>
 </p>
 
-## ✅️ &nbsp; Migration Guide
+## Table of Contents
 
-This documentation is for Docz [v1](https://github.com/pedronauck/docz/pull/656). Follow our [migration guide](/MIGRATION_GUIDE.md) if you haven't upgraded your project yet.
+* [📜 About](#-about)
+* [🍩 Features](#-features)
+* [🏁 Getting started](#-getting-started)
+* [📖 Documentation](#-documentation-)
+* [🧠 Good to know](#-good-to-know-)
+* [🎁 Contributing](#-contributing)
+* [👏 Sponsoring issues](#-sponsoring-issues)
+* [💉 Running tests](#-running-tests)
+* [🔧 Compatibility](#-compatibility)
+* [🔮 What's next](#-whats-next)
+* [🙏 Acknowledgements](#-acknowledgements)
 
-## 🎩 &nbsp; Features
+## 📜 About
 
-- 🧘 **Zero config and easy.** Don't worry about complex configurations steps.
-- ⚡️ **Blazing Fast.** Full hot reload support with webpack 4 and automatic code splitting.
-- 💅 **Easy to customize.** Create and use real customizable themes.
-- 📝 **[MDX](https://github.com/mdx-js/mdx) Based.** Write markdown enhanced by the power of components.
-- 🎛 **Pluggable.** Use plugins to manipulate and customise Docz to suit your needs.
-- 🔐 **Typescript Support.** Full support for TypeScript. Write your type definitions with no extra setup required.
+**ts-toolbelt** is a collection of types that makes TypeScript even **safer**.
+It's goal is to improve type correctness while adding a whole new set of
+**features** to TypeScript. 
 
-## 🤔 &nbsp; Why?
+It uses the type system itself for TypeScript to compute more complex types. In
+other words, its API exposes types that trade **CPU & RAM** for higher type
+safety.
 
-Libraries that make development easier are appearing every day. Styleguides and design systems are growing in popularity. Today, tools that allow us to get our best work done and be efficient are necessary. We shouldn't be spending too much time on tasks that should be trivial. This is why we created **Docz**.
+**ts-toolbelt** completes TypeScript with a collection of more than **150**
+tested types.
 
-Documenting code is one of the most important and time-heavy processes when you're creating something new. A lot of time is wasted on unnecessarily attempting to build a documentation site that will match the style we want.
+#### Goals
+* This package aims to be the home of all **utility types**
+* High [**performance**](https://gist.github.com/pirix-gh/02097996d2a1e4e7aa2d54b330451ea0), so it will not bloat TS (max +4sec)
+* Computed types are always **readable**, like if you typed it
+* Software that's more type-safe, **flexible** & more **robust**
+* Bring a whole new set of extra **features** to TypeScript
+* Types can be **combined** together to create new ones!
 
-## 👉🏻 &nbsp; More info on [our website](https://docz.site)
+## 🍩 Features
 
-## 🎛 &nbsp; Plugins
+Here's some of the most useful features:
 
-- **[gatsby-theme-docz](https://github.com/pedronauck/docz/tree/master/core/gatsby-theme-docz)** - Use Docz as a theme for Gatsby.
-- **[css](https://github.com/pedronauck/docz-plugin-css)** - Parse CSS files inside your documents.
-- **[netlify](https://github.com/nicholasess/docz-plugin-netlify)** - Deploy your Docz site to [Netlify](http://netlify.com/).
-- **[postcss](https://github.com/andreasonny83/docz-plugin-postcss)** - Use Docz with PostCSS.
-- **[svg sprite loader](https://github.com/trustedhousesitters/docz-plugin-svg-sprite-loader)** - Docz plugin for SVG sprite loader.
-- **[snapshots](https://github.com/JosephConradBlack/docz-plugin-snapshots)** - A plugin for Docz that creates jest snapshots for all documented component usages.
+* [Merge two types together](https://pirix-gh.github.io/ts-toolbelt/modules/_object_merge_.html#merge)
+* [Update the field of a type](https://pirix-gh.github.io/ts-toolbelt/modules/_object_update_.html#update)
+* [Make some fields optional](https://pirix-gh.github.io/ts-toolbelt/modules/_object_optional_.html#optional)
+* [Change a type at any depth!](https://pirix-gh.github.io/ts-toolbelt/modules/_object_p_update_.html#update)
+* [Concat two tuples together](https://pirix-gh.github.io/ts-toolbelt/modules/_tuple_concat_.html#concat)
+* [Get the last item of a tuple](https://pirix-gh.github.io/ts-toolbelt/modules/_tuple_last_.html#last)
+* ... and so much more
 
-## 🗃 &nbsp; Examples
+<p align="center">
+  <img src="https://raw.githubusercontent.com/pirix-gh/ts-toolbelt/master/.github/demo.gif" id="demo">
+<p align="center">
 
-- **[basic](https://github.com/pedronauck/docz/tree/master/examples/basic)** - Barebones example.
-- **[gatsby](https://github.com/pedronauck/docz/tree/master/examples/gatsby)** - Example using Docz as a theme for Gatsby.
-- **[react native](https://github.com/pedronauck/docz/tree/master/examples/react-native)** - Using Docz in a React Native project.
-- **[styled-components](https://github.com/pedronauck/docz/tree/master/examples/styled-components)** - Using Docz with `styled-components`.
-- **[with typescript](https://github.com/pedronauck/docz/tree/master/examples/typescript)** - Using Docz with Typescript.
-- **[with flow](https://github.com/pedronauck/docz/tree/master/examples/flow)** - Using Docz with Flow.
-- **[with sass](https://github.com/pedronauck/docz-plugin-css/tree/master/examples/css-sass)** - Using Docz parsing CSS with SASS.
-- **[with less](https://github.com/pedronauck/docz-plugin-css/tree/master/examples/css-less)** - Using Docz parsing CSS with LESS.
-- **[with postcss](https://github.com/pedronauck/docz-plugin-css/tree/master/examples/css-postcss)** - Using Docz parsing CSS with PostCSS.
-- **[with stylus](https://github.com/pedronauck/docz-plugin-css/tree/master/examples/css-stylus)** - Using Docz parsing CSS with Stylus.
+> If you don't find the type you are looking for, you are welcome to open a [feature request](https://github.com/pirix-gh/ts-toolbelt/issues/new?template=---feature-request.md)!
 
-## 🌍 &nbsp; Around the world
+## 🏁 Getting Started
 
-- **[Smooth UI](https://smooth-ui.smooth-code.com/)** - Modern React UI library.
-- **[Set Protocol Docs](https://docs.setprotocol.com/)** - Documentation site of Set Protocol.
-- **[RBX](https://dfee.github.io/rbx)** - The Comprehensive Bulma UI Framework for React.
-- **[Circuit UI](https://circuit.sumup.com/#/)** - React component library for [SumUp](https://sumup.com) web apps.
-- **[Fannypack](https://fannypack.style)** - A friendly & accessible React UI Kit built with [Reakit](https://reakit.io/).
-- **[React Pixi](https://reactpixi.org/#/)** - React Fiber renderer for Pixi.
-- **[React Hotkey Tooltip](https://react-hotkey-tooltip.netlify.com/#/)** - A global Hotkey provider with built in tooltip for React.
-- **[Sajari React SDK](https://sajari-sdk-react.netlify.com/)** - Library of React Components for the Sajari.
+#### Prerequisites
 
-## ⚠️ &nbsp; Warning
+This is important, the lowest TypeScript version that is [supported](#-compatibility) is 3.5
 
-Since the release of v1 you need `react` and `react-dom` `v16.8.0` or later installed.
-
-## 📟 &nbsp; Install and Usage
-
-Getting started with **Docz** is really quick and easy.
-
-Firstly, install `docz` and a theme of your choosing using your favourite package manager:
-
-```bash
-$ yarn add --dev docz docz-theme-default
-
-# or
-
-$ npm install --save-dev docz docz-theme-default
+```sh
+npm install typescript@^3.5.0 --save
 ```
 
-Next, add some `.mdx` files anywhere inside your project:
+#### Installation
 
-```markdown
----
-name: Button
----
-
-import { Playground, Props } from 'docz'
-import Button from './'
-
-# Button
-
-<Props of={Button} />
-
-## Basic usage
-
-<Playground>
-  <Button>Click me</Button>
-  <Button kind="secondary">Click me</Button>
-</Playground>
+```sh
+npm install ts-toolbelt --save
 ```
 
-Finally, run the Docz development server:
+#### Hello World
 
-```bash
-$ yarn docz dev
+```ts
+import {A, B, C, F, I, N, O, S, T, U} from 'ts-toolbelt'
+// Wonder what these letters mean? Check the docs below
+
+// Merge two `object` together
+type merge = O.Merge<{name: string}, {age?: number}>
 ```
 
-That's it! Now you have some real badass documentation 👊
+## [📖 Documentation ⤢](https://pirix-gh.github.io/ts-toolbelt/)
 
-![](https://cdn-std.dprcdn.net/files/acc_649651/7RRXv)
+The project is organized around TypeScript's main concepts:
 
-Any doubt? Check [our docs](http://docz.site) to see more about **Docz**!
+|              |                    |              |                |                 |              |
+|--------------|--------------------|--------------|----------------|-----------------|--------------|
+| **A**(ny)    | **B**(boolean)     | **C**(lass)  | **F**(unction) | **I**(teration) | **N**(umber) |
+| **O**(bject) | **O**(bject).**P** | **S**(tring) | **T**(uple)    | **U**(nion)     | Test         |
 
-## 🤝 &nbsp; Contributions
+**The documentation is complete but needs more examples**. So feel free to [ask for
+examples](https://github.com/pirix-gh/ts-toolbelt/issues/new?template=---question.md),
+and I will update the docs.
 
-Contributions, issues and feature requests are very welcome.
-Please make sure to read the [Contributing Guide](/CONTRIBUTING.md) before making a pull request.
+#### Imports
 
-## 💪🏻 &nbsp; Contributors
+There are many ways to import the types into your project:
 
-This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+* Explicit
+  ```ts
+  import {Any, Boolean, Class, Function, Iteration, Number, Object, String, Tuple, Union} from 'ts-toolbelt'
+  ```
 
-<a href="https://github.com/pedronauck/docz/graphs/contributors"><img src="https://opencollective.com/docz/contributors.svg?width=890&button=false" /></a>
+* Compact
+  ```ts
+  import {A, B, C, F, I, N, O, S, T, U} from 'ts-toolbelt'
+  ```
 
-## 💭 &nbsp; Needing Help?
+* Portable
+  ```ts
+  import tb from 'ts-toolbelt'
+  ```
 
-If you need some help you can chat with us on [our Spectrum Community](https://spectrum.chat/docz), we have a great team who would be more than happy to help you:
+#### Internal Docs
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/2029172?v=4" width="60px;" alt="Pedro Nauck"/><br /><sub><b>Pedro Nauck</b></sub>](https://github.com/pedronauck)<br />[💻](https://github.com/pedronauck/docz/commits?author=pedronauck "Code") [📖](https://github.com/pedronauck/docz/commits?author=pedronauck "Documentation") [🐛](https://github.com/pedronauck/docz/issues?q=author%3Apedronauck "Bug reports") [👀](#review-pedronauck "Reviewed Pull Requests") |
-| :---: |
+If you're interested to **learn** how the internals work, [this tutorial](https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab) will get
+you on track to start writing your own types.
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+## [🧠 Good to Know ⤢](https://github.com/pirix-gh/ts-toolbelt/wiki)
+
+In this wiki, you'll find some extra resources for your learning & understanding.
+
+It is incremental and it will be completed on demand, you can ask for this below.
+
+#### [Questions ⤢](https://github.com/pirix-gh/ts-toolbelt/issues?q=label%3Aquestion+sort%3Areactions-%2B1-desc)
+
+Are you missing something? Participate to the open-wiki by posting your
+questions [right here](https://github.com/pirix-gh/ts-toolbelt/issues/new?template=---question.md).
+
+## 🎁 Contributing
+
+Contributions are what make the open source community such an amazing place to
+learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+There are many ways to contribute to the project:
+
+#### Community
+* [Help the community with answers on Gitter](https://gitter.im/ts-toolbelt/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+* [Reporting bugs or requesting new features](https://github.com/pirix-gh/ts-toolbelt/issues/new/choose)
+
+#### Codebase
+* Improving existing documentation 
+* Adding new types to the collection
+
+#### Pull Requests
+1. [Read the tutorial](https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab)
+2. Fork the project
+3. Clone your fork
+4. Create a pr/**feature** branch
+   ```sh
+   git checkout -b pr/CoolFeature
+   ```
+5. Commit your changes
+   ```sh
+   git commit -m 'Added this CoolFeature'
+   ```
+6. [Run the tests](#-running-tests)
+7. Commit your changes
+   ```sh
+   git push origin pr/CoolFeature
+   ```
+8. Open a pull request
+
+## 👏 Sponsoring issues
+
+**Sponsored issues have higher priority over non-critical issues**.<br>
+
+You can either request a new feature or a bug fix then fund it.
+
+<a href="https://issuehunt.io/r/pirix-gh/ts-toolbelt">
+  <img
+  src="https://raw.githubusercontent.com/pirix-gh/ts-toolbelt/master/.github/issuehunt-logo.svg?sanitize=true">
+</a>
+<br>
+<br>
+
+**The money will be transparently split with an issue's assignees.**
+
+## 💉 Running tests
+
+#### For this project
+
+To run the `lint` & `type` tests, simply run:
+
+```sh
+npm test
+```
+
+#### For your project
+
+Want to test your own types? Let's get started:
+
+```ts
+import {A, B, C, F, I, N, O, S, T, U, Test} from 'ts-toolbelt'
+
+const {checks, check} = Test
+
+checks([
+    check<N.Plus<'1', '30'>,    '31',  Test.Pass>(),
+    check<N.Plus<'5', '-3'>,    '2',   Test.Pass>(),
+])
+```
+
+> Place it in a file that won't be executed, it's just for TypeScript to test types
+
+## 🔧 Compatibility
+
+The project is maintained to adapt to the constant
+[changes of TypeScript](https://github.com/Microsoft/TypeScript/wiki/Roadmap):
+
+| ts-toolbelt | typescript |
+|-------------|------------|
+| 1.x.x       | ~3.5.x     |
+| 2.x.x       | ^3.5.x     |
+| 3.x.x       | ^3.5.x     |
+
+Major version numbers will upgrade whenever TypeScript had breaking changes (it
+happened that TS had breaking changes on minor versions). Otherwise, the release
+versions will naturally follow the semantic versioning.
+
+## 🔮 What's next
+
+* Automated performance tests
+  ```sh
+  # performance is checked manually with 
+  npx tsc --noEmit --extendedDiagnostics
+  ```
+* Improve with user feedback
+* Need to write the examples
+
+## 🙏 Acknowledgements
+
+Many, many thanks to all the
+[contributors](https://github.com/pirix-gh/ts-toolbelt/graphs/contributors) and:
+
+* [André Staltz](https://github.com/staltz)
+* [Joe Calzaretta](https://github.com/jcalz)
+* [Matt McCutchen](https://github.com/mattmccutchen)
+
+## 💟 Friendly Projects
+- [`utility-types`](https://github.com/piotrwitek/utility-types) - Collection of utility types, complementing TypeScript built-in mapped types and aliases
