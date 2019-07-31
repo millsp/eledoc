@@ -80,11 +80,13 @@ npm install eledoc --save-dev
 
 #### Hello World
 
+With the command line
+
 ```sh
 npx typedoc --out docs src --theme node_modules/eledoc/bin/default/
 ```
 
-or
+Or in your `package.json`
 
 ```ts
 "scripts": {
