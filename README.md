@@ -66,16 +66,30 @@
 
 ## 🏁 Getting Started
 
+#### Prerequisites
+
+```sh
+npm install typedoc --save-dev
+```
+
 #### Installation
 
 ```sh
-npm install eledoc --save
+npm install eledoc --save-dev
 ```
 
 #### Hello World
 
 ```sh
 npx typedoc --out docs src --theme node_modules/eledoc/bin/default/
+```
+
+or
+
+```ts
+"scripts": {
+  "build:docs": "typedoc --out docs src --theme node_modules/eledoc/bin/default/",
+}
 ```
 
 ## [🧠 Good to Know ⤢](https://github.com/pirix-gh/eledoc/wiki)
