@@ -159,4 +159,4 @@ Many, many thanks to all the
 [contributors](https://github.com/pirix-gh/eledoc/graphs/contributors)
 
 ## 💟 Friendly Projects
-- [`ts-toolbelt`](https://github.com/pirix-gh/ts-toolbelt) - 👷 Higher type safety for TypeScript
+* [`ts-toolbelt`](https://github.com/pirix-gh/ts-toolbelt) - 👷 Higher type safety for TypeScript
