@@ -1,44 +1,41 @@
 <p align="center">
-  <a href="https://github.com/pirix-gh/ts-toolbelt">
-    <img alt="logo" title="ts-toolbelt" src="https://raw.githubusercontent.com/pirix-gh/ts-toolbelt/master/.github/logo.png" width="300">
+  <a href="https://github.com/pirix-gh/eledoc">
+    <img alt="logo" title="eledoc" src="https://raw.githubusercontent.com/pirix-gh/eledoc/master/.github/logo.png" width="300">
   </a>
 
-  <h3 align="center">ts-toolbelt</h3>
+  <h3 align="center">eledoc</h3>
 
   <p align="center">
-    👷 Higher type safety for TypeScript
+    🌒 A material dark theme for TypeDoc
     <br>
-    <a href="https://pirix-gh.github.io/ts-toolbelt/" target="_blank"><strong>Explore the docs »</strong></a>
+    <a href="https://pirix-gh.github.io/eledoc/" target="_blank"><strong>Explore the docs »</strong></a>
     <br>
     <br>
     <a href="#demo">🎮 View Demo</a>
     ·
-    <a href="https://github.com/pirix-gh/ts-toolbelt/issues/new?template=---bug-report.md">🐞 Report Bug</a>
+    <a href="https://github.com/pirix-gh/eledoc/issues/new?template=---bug-report.md">🐞 Report Bug</a>
     ·
-    <a href="https://github.com/pirix-gh/ts-toolbelt/issues/new?template=---feature-request.md">🍩 Request Feature</a>
+    <a href="https://github.com/pirix-gh/eledoc/issues/new?template=---feature-request.md">🍩 Request Feature</a>
     ·
-    <a href="https://github.com/pirix-gh/ts-toolbelt/issues/new?template=---question.md">🤔  Ask Questions</a>
+    <a href="https://github.com/pirix-gh/eledoc/issues/new?template=---question.md">🤔  Ask Questions</a>
   </p>
 </p>
 
 <p align="center">
-  <a href="https://gitter.im/ts-toolbelt/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link" target="_blank">
-    <img src="https://img.shields.io/gitter/room/ts-toolbelt/community.svg">
+  <a href="https://gitter.im/eledoc-/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link" target="_blank">
+    <img src="https://img.shields.io/gitter/room/eledoc-/community.svg">
   </a>
-  <a href="https://www.npmjs.com/package/ts-toolbelt" target="_blank">
-    <img src="https://img.shields.io/npm/v/ts-toolbelt.svg">
-  </a>
-  <a href="https://travis-ci.org/pirix-gh/ts-toolbelt" target="_blank">
-    <img src="https://img.shields.io/travis/pirix-gh/ts-toolbelt.svg">
+  <a href="https://www.npmjs.com/package/eledoc" target="_blank">
+    <img src="https://img.shields.io/npm/v/eledoc.svg">
   </a>
   <a href="#">
-    <img src="https://img.shields.io/npm/dm/ts-toolbelt.svg">
+    <img src="https://img.shields.io/npm/dm/eledoc.svg">
   </a>
   <a href="http://makeapullrequest.com" target="_blank">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg">
   </a>
   <a href="#">
-    <img src="https://img.shields.io/npm/l/ts-toolbelt.svg">
+    <img src="https://img.shields.io/npm/l/eledoc.svg">
   </a>
 </p>
 
@@ -47,127 +44,52 @@
 * [📜 About](#-about)
 * [🍩 Features](#-features)
 * [🏁 Getting started](#-getting-started)
-* [📖 Documentation](#-documentation-)
 * [🧠 Good to know](#-good-to-know-)
 * [🎁 Contributing](#-contributing)
 * [👏 Sponsoring issues](#-sponsoring-issues)
-* [💉 Running tests](#-running-tests)
-* [🔧 Compatibility](#-compatibility)
 * [🔮 What's next](#-whats-next)
 * [🙏 Acknowledgements](#-acknowledgements)
 
 ## 📜 About
 
-**ts-toolbelt** is a collection of types that makes TypeScript even **safer**.
-It's goal is to improve type correctness while adding a whole new set of
-**features** to TypeScript. 
-
-It uses the type system itself for TypeScript to compute more complex types. In
-other words, its API exposes types that trade **CPU & RAM** for higher type
-safety.
-
-**ts-toolbelt** completes TypeScript with a collection of more than **150**
-tested types.
+**eledoc** is a delightful dark theme for TypeDoc
 
 #### Goals
-* This package aims to be the home of all **utility types**
-* High [**performance**](https://gist.github.com/pirix-gh/02097996d2a1e4e7aa2d54b330451ea0), so it will not bloat TS (max +4sec)
-* Computed types are always **readable**, like if you typed it
-* Software that's more type-safe, **flexible** & more **robust**
-* Bring a whole new set of extra **features** to TypeScript
-* Types can be **combined** together to create new ones!
+
+* Provide a nice user experience
+* Proper layout with visual cues
+* Fix problems from usual themes
 
 ## 🍩 Features
 
-Here's some of the most useful features:
-
-* [Merge two types together](https://pirix-gh.github.io/ts-toolbelt/modules/_object_merge_.html#merge)
-* [Update the field of a type](https://pirix-gh.github.io/ts-toolbelt/modules/_object_update_.html#update)
-* [Make some fields optional](https://pirix-gh.github.io/ts-toolbelt/modules/_object_optional_.html#optional)
-* [Change a type at any depth!](https://pirix-gh.github.io/ts-toolbelt/modules/_object_p_update_.html#update)
-* [Concat two tuples together](https://pirix-gh.github.io/ts-toolbelt/modules/_tuple_concat_.html#concat)
-* [Get the last item of a tuple](https://pirix-gh.github.io/ts-toolbelt/modules/_tuple_last_.html#last)
-* ... and so much more
-
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pirix-gh/ts-toolbelt/master/.github/demo.gif" id="demo">
+  <img src="https://raw.githubusercontent.com/pirix-gh/eledoc/master/.github/demo.gif" id="demo">
 <p align="center">
-
-> If you don't find the type you are looking for, you are welcome to open a [feature request](https://github.com/pirix-gh/ts-toolbelt/issues/new?template=---feature-request.md)!
 
 ## 🏁 Getting Started
-
-#### Prerequisites
-
-This is important, the lowest TypeScript version that is [supported](#-compatibility) is 3.5
-
-```sh
-npm install typescript@^3.5.0 --save
-```
 
 #### Installation
 
 ```sh
-npm install ts-toolbelt --save
+npm install eledoc --save
 ```
 
 #### Hello World
 
-```ts
-import {A, B, C, F, I, N, O, S, T, U} from 'ts-toolbelt'
-// Wonder what these letters mean? Check the docs below
-
-// Merge two `object` together
-type merge = O.Merge<{name: string}, {age?: number}>
+```sh
+npx typedoc --out docs src --theme node_modules/eledoc/bin/default/
 ```
 
-## [📖 Documentation ⤢](https://pirix-gh.github.io/ts-toolbelt/)
-
-The project is organized around TypeScript's main concepts:
-
-|              |                    |              |                |                 |              |
-|--------------|--------------------|--------------|----------------|-----------------|--------------|
-| **A**(ny)    | **B**(boolean)     | **C**(lass)  | **F**(unction) | **I**(teration) | **N**(umber) |
-| **O**(bject) | **O**(bject).**P** | **S**(tring) | **T**(uple)    | **U**(nion)     | Test         |
-
-**The documentation is complete but needs more examples**. So feel free to [ask for
-examples](https://github.com/pirix-gh/ts-toolbelt/issues/new?template=---question.md),
-and I will update the docs.
-
-#### Imports
-
-There are many ways to import the types into your project:
-
-* Explicit
-  ```ts
-  import {Any, Boolean, Class, Function, Iteration, Number, Object, String, Tuple, Union} from 'ts-toolbelt'
-  ```
-
-* Compact
-  ```ts
-  import {A, B, C, F, I, N, O, S, T, U} from 'ts-toolbelt'
-  ```
-
-* Portable
-  ```ts
-  import tb from 'ts-toolbelt'
-  ```
-
-#### Internal Docs
-
-If you're interested to **learn** how the internals work, [this tutorial](https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab) will get
-you on track to start writing your own types.
-
-## [🧠 Good to Know ⤢](https://github.com/pirix-gh/ts-toolbelt/wiki)
+## [🧠 Good to Know ⤢](https://github.com/pirix-gh/eledoc/wiki)
 
 In this wiki, you'll find some extra resources for your learning & understanding.
 
 It is incremental and it will be completed on demand, you can ask for this below.
 
-#### [Questions ⤢](https://github.com/pirix-gh/ts-toolbelt/issues?q=label%3Aquestion+sort%3Areactions-%2B1-desc)
+#### [Questions ⤢](https://github.com/pirix-gh/eledoc/issues?q=label%3Aquestion+sort%3Areactions-%2B1-desc)
 
 Are you missing something? Participate to the open-wiki by posting your
-questions [right here](https://github.com/pirix-gh/ts-toolbelt/issues/new?template=---question.md).
+questions [right here](https://github.com/pirix-gh/eledoc/issues/new?template=---question.md).
 
 ## 🎁 Contributing
 
@@ -176,12 +98,8 @@ learn, inspire, and create. Any contributions you make are **greatly appreciated
 There are many ways to contribute to the project:
 
 #### Community
-* [Help the community with answers on Gitter](https://gitter.im/ts-toolbelt/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
-* [Reporting bugs or requesting new features](https://github.com/pirix-gh/ts-toolbelt/issues/new/choose)
-
-#### Codebase
-* Improving existing documentation 
-* Adding new types to the collection
+* [Help the community with answers on Gitter](https://gitter.im/eledoc-/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+* [Reporting bugs or requesting new features](https://github.com/pirix-gh/eledoc/issues/new/choose)
 
 #### Pull Requests
 1. [Read the tutorial](https://medium.com/free-code-camp/typescript-curry-ramda-types-f747e99744ab)
@@ -208,75 +126,23 @@ There are many ways to contribute to the project:
 
 You can either request a new feature or a bug fix then fund it.
 
-<a href="https://issuehunt.io/r/pirix-gh/ts-toolbelt">
+<a href="https://issuehunt.io/r/pirix-gh/eledoc">
   <img
-  src="https://raw.githubusercontent.com/pirix-gh/ts-toolbelt/master/.github/issuehunt-logo.svg?sanitize=true">
+  src="https://raw.githubusercontent.com/pirix-gh/eledoc/master/.github/issuehunt-logo.svg?sanitize=true">
 </a>
 <br>
 <br>
 
 **The money will be transparently split with an issue's assignees.**
 
-## 💉 Running tests
-
-#### For this project
-
-To run the `lint` & `type` tests, simply run:
-
-```sh
-npm test
-```
-
-#### For your project
-
-Want to test your own types? Let's get started:
-
-```ts
-import {A, B, C, F, I, N, O, S, T, U, Test} from 'ts-toolbelt'
-
-const {checks, check} = Test
-
-checks([
-    check<N.Plus<'1', '30'>,    '31',  Test.Pass>(),
-    check<N.Plus<'5', '-3'>,    '2',   Test.Pass>(),
-])
-```
-
-> Place it in a file that won't be executed, it's just for TypeScript to test types
-
-## 🔧 Compatibility
-
-The project is maintained to adapt to the constant
-[changes of TypeScript](https://github.com/Microsoft/TypeScript/wiki/Roadmap):
-
-| ts-toolbelt | typescript |
-|-------------|------------|
-| 1.x.x       | ~3.5.x     |
-| 2.x.x       | ^3.5.x     |
-| 3.x.x       | ^3.5.x     |
-
-Major version numbers will upgrade whenever TypeScript had breaking changes (it
-happened that TS had breaking changes on minor versions). Otherwise, the release
-versions will naturally follow the semantic versioning.
-
 ## 🔮 What's next
 
-* Automated performance tests
-  ```sh
-  # performance is checked manually with 
-  npx tsc --noEmit --extendedDiagnostics
-  ```
-* Improve with user feedback
-* Need to write the examples
+* Re-write with React
 
 ## 🙏 Acknowledgements
 
 Many, many thanks to all the
-[contributors](https://github.com/pirix-gh/ts-toolbelt/graphs/contributors) and:
-
-* [André Staltz](https://github.com/staltz)
-* [Joe Calzaretta](https://github.com/jcalz)
-* [Matt McCutchen](https://github.com/mattmccutchen)
+[contributors](https://github.com/pirix-gh/eledoc/graphs/contributors)
 
 ## 💟 Friendly Projects
-- [`utility-types`](https://github.com/piotrwitek/utility-types) - Collection of utility types, complementing TypeScript built-in mapped types and aliases
+- [`ts-toolbelt`](https://github.com/pirix-gh/ts-toolbelt) - 👷 Higher type safety for TypeScript
