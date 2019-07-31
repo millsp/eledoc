@@ -8,8 +8,6 @@
   <p align="center">
     🌒 A material dark theme for TypeDoc
     <br>
-    <a href="https://pirix-gh.github.io/eledoc/" target="_blank"><strong>Explore the docs »</strong></a>
-    <br>
     <br>
     <a href="#demo">🎮 View Demo</a>
     ·
