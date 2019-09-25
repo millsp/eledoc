@@ -32,13 +32,13 @@
     "grunt-autoprefixer": "^3.0.4",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-uglify": "^2.3.0",
-    "grunt-contrib-watch": "~1.0.0",
-    "grunt-sass": "^2.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "~1.1.0",
+    "grunt-sass": "^3.1.0",
     "grunt-string-replace": "^1.0.0",
     "grunt-ts": "^5.5.1",
-    "rimraf": "^2.6.1",
-    "typescript": "2.3.2"
+    "rimraf": "^3.0.0",
+    "typescript": "3.6.3"
   },
   "files": [
     "bin",
