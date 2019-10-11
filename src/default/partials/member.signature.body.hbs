@@ -17,9 +17,6 @@
         {{#each parameters}}
             <li>
                 {{#compact}}
-                    {{#each flags}}
-                        <span class="tsd-flag ts-flag{{this}}">{{this}}</span>&nbsp;
-                    {{/each}}
                     {{#if flags.isRest}}<span class="tsd-signature-symbol">...</span>{{/if}}
                     <span class="name">{{name}}</span>:&nbsp;
                     {{#with type}}{{>type}}{{/with}}
@@ -29,6 +26,9 @@
                         {{defaultValue}}
                         </span>
                     {{/if}}
+                    {{#each flags}}
+                        &nbsp;<span class="tsd-flag ts-flag{{this}}">{{this}}</span>&nbsp;
+                    {{/each}}
                 {{/compact}}
 
                 {{> comment}}

@@ -30,14 +30,6 @@
 
 {{> header}}
 
-<nav id="global-nav" class="tsd-navigation sidenav">
-    <ul>
-        {{#each navigation.children}}
-            {{> navglobals}}
-        {{/each}}
-    </ul>
-</nav>
-
 <div id="main" class="container container-main">
     <div class="row">
         <div class="col-8 col-content">
@@ -45,19 +37,23 @@
         </div>
         <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
             <nav class="tsd-navigation secondary menu-sticky">
-                <ul>
-                    <li>
-                        📑
-                        <span onclick="openNav(event)" style="cursor: pointer; padding-left: 10px">
-                            Documentation
-                        </span>
-                    </li>
-                </ul>
-                <br>
                 <ul class="before-current">
                     {{#each toc.children}}
                         {{> toc.root}}
                     {{/each}}
+                </ul>
+                {{#if toc.children}}
+                    <br>
+                {{/if}}
+                <ul>
+                    <li>
+                        📑 Index
+                        <ul>
+                        {{#each navigation.children}}
+                            {{> navglobals}}
+                        {{/each}}
+                    </ul>
+                    </li>
                 </ul>
             </nav>
         </div>

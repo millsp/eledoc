@@ -1,12 +1,12 @@
 // Base format for the navigation parts.
 //
 =INDENT($DEPTH, $BASE, $STEP, $PROGRESS:$DEPTH)
-    @if $PROGRESS > 0
+    @if $PROGRESS >= 0
         & li
             +INDENT($DEPTH, $BASE, $STEP, $PROGRESS - 1)
     @else
         & a
-            padding-left: #{($BASE + $STEP * ($DEPTH - 1))}px
+            margin-left: #{($BASE + $STEP * ($DEPTH - 1))}px
 
 =INDENTS($COUNT, $BASE, $STEP)
     @for $DEPTH from 1 through $COUNT
@@ -19,10 +19,10 @@
         display: block
         padding-top: 2px
         padding-bottom: 2px
-        border-left: 2px solid transparent
         color: $COLOR_TEXT
         text-decoration: none
         transition: border-left-color 0.1s
+        height: 20px
 
         &:hover
             text-decoration: underline
@@ -132,7 +132,7 @@
 //
 .tsd-navigation.secondary
     ul
-        +INDENTS(6, 25, 20)
+        +INDENTS(6, 30, 20)
         transition: opacity 0.2s
 
     li.focus > a,
@@ -140,8 +140,6 @@
         border-left-color: $COLOR_MENU_DIVIDER_FOCUS
 
     li.current
-        margin-top: 20px
-        margin-bottom: 20px
 
 
 // Sticky menu setup
