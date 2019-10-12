@@ -60,6 +60,9 @@
 
 ## 🍩 Features
 
+* All the features from the default typedoc themes
+* Create sections with `@[tag-name]` in doc comments
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/pirix-gh/eledoc/master/.github/demo.gif" id="demo">
 <p align="center">
@@ -94,7 +97,7 @@ Or in your `package.json`
 }
 ```
 
-## [🧠 Good to Know ⤢](https://github.com/pirix-gh/eledoc/wiki)
+## [🧠 Good to Know ⤢](https://github.com/pirix-gh/eledoc/issues?q=label%3Aquestion+sort%3Areactions-%2B1-desc)
 
 In this wiki, you'll find some extra resources for your learning & understanding.
 
