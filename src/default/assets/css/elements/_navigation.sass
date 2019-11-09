@@ -13,16 +13,11 @@
         +INDENT($DEPTH, $BASE, $STEP)
 
 .tsd-navigation
-    padding: 0 0 0 40px
-
     a
         display: block
-        padding-top: 2px
-        padding-bottom: 2px
         color: $COLOR_TEXT
         text-decoration: none
         transition: border-left-color 0.1s
-        height: 20px
 
         &:hover
             text-decoration: underline
@@ -31,6 +26,15 @@
         margin: 0
         padding: 0
         list-style: none
+
+    > ul
+        margin: 20px 0
+        padding: 20px
+        background-color: #191919
+        border: 4px solid #303030
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.2)
+        border-radius: 4px
+        font-weight: 300
 
     li
         padding: 0
@@ -92,10 +96,6 @@
     box-shadow: 0 0 4px rgba(#000, 0.25)
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main
-    transition: margin-left .5s
-    padding: 20px
-
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px)
     .sidenav
