@@ -1,3 +1,18 @@
+.col-menu
+    height: 100%
+    height: -moz-available
+    height: -webkit-fill-available
+    height: fill-available
+    overflow: auto
+
+.col-content
+    height: 100%
+    height: -moz-available
+    height: -webkit-fill-available
+    height: fill-available
+    overflow: auto
+    padding-left: 20px
+
 html.default
     +size-md
         .col-content
@@ -82,12 +97,13 @@ html.default
             .col-menu
                 visibility: visible
                 transform: translate(0,0)
+                padding-left: 20px
 
 .tsd-page-title
-    padding: 70px 0 20px 0
+    padding: 10px 0 10px 0
     margin: 0 0 0 0
     background: $COLOR_PANEL
-    box-shadow: 0 0 5px rgba(#000, 0.35)
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.125)
 
     h1
         margin: 0
@@ -113,4 +129,4 @@ html.default
             content: ' / '
 
 body
-    overflow-x: hidden
+    overflow: hidden

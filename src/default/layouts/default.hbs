@@ -9,29 +9,14 @@
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{relativeURL "assets/css/main.css"}}">
-    <script>
-        var test = 0
-        function openNav(e) {
-            document.getElementById("global-nav").style.width   = "250px";
-            document.getElementById("global-nav").style.padding = "25px";
-            e.stopPropagation()
-        }
-
-        function closeNav(e) {
-            if (!document.getElementById("global-nav").contains(e.target)) {
-                document.getElementById("global-nav").style.width   = "0";
-                document.getElementById("global-nav").style.padding = "0";
-            }
-        }
-    </script>
 </head>
 
 <body>
 
 {{> header}}
 
-<div class="container container-main">
-    <div class="row">
+<div class="container">
+    <div class="row container container-main">
         <div class="col-3 col-menu menu-sticky-wrap menu-highlight">
             <nav class="tsd-navigation secondary menu-sticky">
                 {{#if toc.children}}
@@ -54,11 +39,10 @@
         </div>
         <div class="col-9 col-content">
             {{{contents}}}
+            {{> footer}}
         </div>
     </div>
 </div>
-
-{{> footer}}
 
 <div class="overlay"></div>
 <script src="{{relativeURL "assets/js/main.js"}}"></script>
