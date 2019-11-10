@@ -1,0 +1,12 @@
+{{#if children}}
+    {{#each children}}
+        <div class="tsd-navigation secondary">
+            <ul>
+                <li class="{{cssClasses}}">
+                    <a href="{{relativeURL url}}" class="tsd-kind-icon">{{#if name}}{{{wbr name}}}{{else}}<em>{{{wbr kindString}}}</em>{{/if}}</a>
+                    {{> index.children.rec}}
+                </li>
+            </ul>
+        </div>
+    {{/each}}
+{{/if}}

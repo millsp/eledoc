@@ -124,6 +124,7 @@
     position: relative;
     padding-left: 20px;
     text-indent: -20px;
+    width: max-content;
 
     &::before {
         font-weight: bold;
