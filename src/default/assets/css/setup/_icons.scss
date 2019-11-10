@@ -26,9 +26,15 @@
 }
 
 @mixin icon($icon, $kind) {
+    ul li .tsd-kind-#{$kind} {
+        > .tsd-kind-icon::before {
+            content: '∟ #{$icon} ' !important
+        }
+    }
+
     .tsd-kind-#{$kind} {
         > .tsd-kind-icon::before {
-            content: '#{$icon}'
+            content: '#{$icon} '
         }
     }
 
@@ -128,7 +134,7 @@
 
     &::before {
         font-weight: bold;
-        display: inline-block;
+        display: contents;
         vertical-align: middle;
         margin: 0 10px 5px 20px;
     }
